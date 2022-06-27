@@ -42,7 +42,9 @@ api.add_listener(
             "js": "numberLength"
         },
         cover_code={
-            'python-3': cover_codes.unwrap_args,
-            'js-node': cover_codes.js_unwrap_args
+            'python-3': {},
+            'js-node': {
+                # "dateForZeros": True,
+            }
         }
     ).on_ready)
