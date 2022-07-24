@@ -1,0 +1,66 @@
+<body data-author="oduvan">
+<div class="question-answer">
+    <div class="question">
+        Я не знаю, як розпочати вирішення цієї місії
+    </div>
+    <div class="answer">
+        <p>String in Python is an array of chars, or array of symbols. So the string "Hi" is an array of two elements "H" and "i". So almost all array functions work correctly with string.</p>
+
+        <p>So you goal is to convert number (int) into a sting, and then, find the length of that string (or find the length of arrat or chars)</p>
+
+        <p>Строка у Python — це масив символів або масив символів. Отже, строка «Hi» — це масив із двох елементів «H» та «i». Тому майже всі функції масиву правильно працюють із рядком.</p>
+
+        <p>Тож ваша мета — перетворити число (int) на строку, а потім знайти довжину цього строки</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Яку функцію я шукаю?
+    </div>
+    <div class="answer">
+        <p>Ось список усіх вбудованих функцій у Python. <a target="_blank" href="https://docs.python.org/3/library/functions.html">https://docs.python.org/3/library/functions.html</a> . Спробуйте подивитися на цей список, можливо щось потрібне знайдете.</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Чи можете ви вказати мені?
+    </div>
+    <div class="answer">
+        <a target="_blank" href="https://docs.python.org/3/library/functions.html#len">len</a> – це функція для визначення довжини, а <a target=" _blank" href="https://docs.python.org/3/library/functions.html#str">str</a>, щоб перетворити будь-який обʼєкт на cтроку.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Ok. Як я можу ним скористатися?
+    </div>
+    <div class="answer">
+        <pre class="brush: python">
+number = 56
+text = str(number)
+text_length = len(text)
+# змінна text_length тепер містить довжину тексту рядка
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Останнє запитання. Як виглядатиме моє остаточне рішення?
+    </div>
+    <div class="answer">
+        <pre class="brush: python">
+def number_length(number: int) -> int:
+    text = str(number)
+    return len(text)
+        </pre>
+
+        <p>Або ви можете зробити це одним рядком</p>
+
+        <pre class="brush: python">
+def number_length(number: int) -> int:
+    return len(str(number))
+        </pre>
+    </div>
+</div>
+
+
+</body>
