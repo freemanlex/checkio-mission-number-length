@@ -1,23 +1,23 @@
 <!-- Describe task in general -->
 
 <p>
-    You have a positive integer. Try to find out how many digits it has?
+    You have a non-negative {% if is_js %}number{% else %}integer{% endif %}. Try to find out how many digits it has.
 </p>
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Input: </strong> A positive Int
+    <strong>Input:</strong> A non-negative {% if is_js %}number{% else %}integer{% endif %}.
 </p>
 
 <p>
-    <strong>Output: </strong> An Int. 
+    <strong>Output:</strong> {% if is_js %}A number{% else %}An integer{% endif %}. 
 </p>
 
 
 <!-- Give some usage examples -->
 <div class="for_info_only">
     <p>
-        <strong>Example:</strong>
+        <strong>Examples:</strong>
     </p>
 
 <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>

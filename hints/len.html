@@ -1,67 +1,123 @@
-
-
-
-
-
 <body data-author="oduvan">
 <div class="question-answer">
     <div class="question">
-        I have no idea how to start solving this mission
+        <i>I have no idea how to start solving this mission.</i>
     </div>
     <div class="answer">
-        <p>String in Python is an array of chars, or array of symbols. So the string "Hi" is an array of two elements "H" and "i". So almost all array functions work correctly with string.</p>
+        <p>String in Python is a list of characters or symbols. So the string <b class="code">"Hi"</b> is a list of two elements <b class="code">"H"</b> and <b class="code">"i"</b>. So almost all list functions work correctly with string.</p>
 
-        <p>So you goal is to convert number (int) into a sting, and then, find the length of that string (or find the length of array or chars)</p>
+        <p>Your goal is to convert integer <b class="code">value</b> into a sting, and then find the length of that string (or find the length of list of chars).</p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Which function I'm looking for?
+        <i>Which function am I looking for?</i>
     </div>
     <div class="answer">
-        <p>Here is a list of all built-in functions in Python. <a target="_blank" href="https://docs.python.org/3/library/functions.html">https://docs.python.org/3/library/functions.html</a>. Try to check the list.</p>
+        <p>Here is a list of <a target="_blank" href="https://docs.python.org/3/library/functions.html">all built-in functions</a> in Python. Try to check the list.</p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Can you please point me out?
+        <i>Can you please point me out?</i>
     </div>
     <div class="answer">
-        <a target="_blank" href="https://docs.python.org/3/library/functions.html#len">len</a> is the function to find the length, and <a target="_blank" href="https://docs.python.org/3/library/functions.html#str">str</a> to conver any object to string.
+        <p><a target="_blank" href="https://docs.python.org/3/library/functions.html#len">len()</a> is the function to find the length, and <a target="_blank" href="https://docs.python.org/3/library/functions.html#str">str()</a> - to convert object to string.</p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Ok. How can I use it then?
+        <i>Ok. How can I use them then?</i>
     </div>
     <div class="answer">
+        <p>
+            Let's convert given integer into the string first. 
+        </p>
         <pre class="brush: python">
-number = 56
-text = str(number)
-text_length = len(text)
-# the variable text_length now contains length of the string text
+value = 56
+text = str(value)
         </pre>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        One last question. How my final solution will look like?
+        <i>
+            How to use the second function?
+        </i>
     </div>
     <div class="answer">
+        <p>
+            Now find the length of the <b class="code">text</b>.
+        </p>
         <pre class="brush: python">
-def number_length(number: int) -> int:
-    text = str(number)
-    return len(text)
-        </pre>
-
-        <p>Or you can do it in one line</p>
-
-        <pre class="brush: python">
-def number_length(number: int) -> int:
-    return len(str(number))
+value = 56
+text = str(value)       
+length = len(text)
         </pre>
     </div>
 </div>
+<div class="question-answer">
+    <div class="question">
+        <i>So, how my final solution will look like?</i>
+    </div>
+    <div class="answer">
+        <p>
+            You just need to wrap the code into function expression and return the <b class="code">length</b>.
+        </p>
+        <p>Here is the whole solution:</p>
+        <pre class="brush: python">
+def number_length(value: int) -> int:
 
+    text = str(value)
+    length = len(text)
 
+    return length
+        </pre>
+        <p>Or you can do it in one line:</p>
+        <pre class="brush: python">
+def number_length(value: int) -> int:
+
+    return len(str(value))
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Show me more solutions!<br />
+        'Cause I wanna be a real Python Ninnjaa!</i>
+    </div>
+    <div class="answer">
+        <p>Sure, grab it!</p>
+        <p>
+            Recursively make integer division and count each level of recursion until <b class="code">value</b> become 0.
+        </p>
+        <pre class="brush: python">
+def number_length(value: int) -> int:
+
+    return 1 + ((value := value // 10) and number_length(value))
+        </pre>
+        <p>
+            Do the same as in previous solution, but clearer. Until the <b class="code">value</b> has more then 1 digit (<b class="code">> 9</b>) add 1 to <b class="code">digits</b> and make integer division. Why <b class="code">digits</b> has initial value <b class="code">1</b>? Because non-negative numbers less then 10 (even 0) have 1 digit length.
+        </p>
+        <pre class="brush: python">
+def number_length(value: int) -> int:
+
+    digits = 1
+    while value > 9:
+        digits += 1
+        value //= 10
+        
+    return digits
+        </pre>
+        <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Thanks! I know and understand more now! Everything works fine!</i>
+    </div>
+    <div class="answer">
+        Glad to hear it!
+    </div>
+</div>
 </body>

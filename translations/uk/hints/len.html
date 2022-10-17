@@ -1,62 +1,123 @@
 <body data-author="oduvan">
 <div class="question-answer">
     <div class="question">
-        Я не знаю, як розпочати вирішення цієї місії
+        <i>Я не знаю, як розпочати вирішення цієї місії.</i>
     </div>
     <div class="answer">
-        <p>Строка у Python — це масив символів або масив символів. Отже, строка «Hi» — це масив із двох елементів «H» та «i». Тому майже всі функції масиву правильно працюють із рядком.</p>
+        <p>Рядок у Python — це список символів. Отже, рядок <b class="code">«Hi»</b> — це список із двох елементів <b class="code">«H»</b> та <b class="code">«i»</b>. Тому майже всі функції cписку правильно працюють із рядком.</p>
 
-        <p>Тож ваша мета — перетворити число (int) на строку, а потім знайти довжину цього строки</p>
+        <p>Тож твоя мета — перетворити ціле число на рядок, а потім знайти довжину цього рядка.</p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Яку функцію я шукаю?
+        <i>Яку функцію я шукаю?</i>
     </div>
     <div class="answer">
-        <p>Ось список усіх вбудованих функцій у Python. <a target="_blank" href="https://docs.python.org/3/library/functions.html">https://docs.python.org/3/library/functions.html</a> . Спробуйте подивитися на цей список, можливо щось потрібне знайдете.</p>
+        <p>Ось список <a target="_blank" href="https://docs.python.org/3/library/functions.html">усіх вбудованих функцій</a> у Python. Спробуй подивитися на цей список, можливо щось потрібне знайдеш.</p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Чи можете ви вказати мені?
+        <i>Чи можеш ти явно показати мені?</i>
     </div>
     <div class="answer">
-        <a target="_blank" href="https://docs.python.org/3/library/functions.html#len">len</a> – це функція для визначення довжини, а <a target=" _blank" href="https://docs.python.org/3/library/functions.html#str">str</a>, щоб перетворити будь-який обʼєкт на cтроку.
+        <a target="_blank" href="https://docs.python.org/3/library/functions.html#len">len()</a> – це функція для визначення довжини, а <a target=" _blank" href="https://docs.python.org/3/library/functions.html#str">str()</a>, щоб перетворити об'єкт на рядок.
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Ok. Як я можу ним скористатися?
+        <i>Добре, як мені ними скористатися?</i>
     </div>
     <div class="answer">
+        <p>
+            Давай спочатку ти перетвориш дане ціле число у рядок. 
+        </p>
         <pre class="brush: python">
-number = 56
-text = str(number)
-text_length = len(text)
-# змінна text_length тепер містить довжину тексту рядка
+value = 56
+text = str(value)
         </pre>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Останнє запитання. Як виглядатиме моє остаточне рішення?
+        <i>
+            А як використати другу функцію?
+        </i>
     </div>
     <div class="answer">
+        <p>
+            Тепер знайди довжину <b class="code">text</b>.
+        </p>
         <pre class="brush: python">
-def number_length(number: int) -> int:
-    text = str(number)
-    return len(text)
-        </pre>
-
-        <p>Або ви можете зробити це одним рядком</p>
-
-        <pre class="brush: python">
-def number_length(number: int) -> int:
-    return len(str(number))
+value = 56
+text = str(value)       
+length = len(text)
         </pre>
     </div>
 </div>
+<div class="question-answer">
+    <div class="question">
+        <i>То як має виглядати моє остаточне рішення?</i>
+    </div>
+    <div class="answer">
+        <p>
+            Тобі лише потрібно обгорнути код у вираз функції і повернути <b class="code">length</b>.
+        </p>
+        <p>Ось повне рішення:</p>
+        <pre class="brush: python">
+def number_length(value: int) -> int:
 
+    text = str(value)
+    length = len(text)
 
+    return length
+        </pre>
+        <p>Або це можна записати в один рядок:</p>
+        <pre class="brush: python">
+def number_length(value: int) -> int:
+
+    return len(str(value))
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Покажи мені більше розв'язків!<br />
+        Адже я хочу стати справжнім Python Ніндзею!</i>
+    </div>
+    <div class="answer">
+        <p>Звісно, тримай!</p>
+        <p>
+            Рекурсивно здійснюй цілочисельне ділення і рахуй рівень рекурсії поки <b class="code">value</b> не стане 0.
+        </p>
+        <pre class="brush: python">
+def number_length(value: int) -> int:
+
+    return 1 + ((value := value // 10) and number_length(value))
+        </pre>
+        <p>
+            Роби те ж, що і в попередньому розв'язку, але більш зрозуміло. Поки <b class="code">value</b> має більше 1 цифри (<b class="code">> 9</b>) додавай 1 до <b class="code">digits</b> і роби цілочисельне ділення. Чому <b class="code">digits</b> має початкове значення <b class="code">1</b>? Тому що невід'ємні числа менше 10 (навіть 0) мають довжину в 1 цифру.
+        </p>
+        <pre class="brush: python">
+def number_length(value: int) -> int:
+
+    digits = 1
+    while value > 9:
+        digits += 1
+        value //= 10
+        
+    return digits
+        </pre>
+        <p><b>Тисни "Best solutions" в меню місії і побачиш багато інших цікавих розв'язків!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Дякую! Тепер я знаю і розумію більше! Все працює як слід!</i>
+    </div>
+    <div class="answer">
+        Приємно це чути!
+    </div>
+</div>
 </body>
