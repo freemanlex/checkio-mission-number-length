@@ -1,0 +1,128 @@
+<body data-author="oduvan">
+<div class="question-answer">
+    <div class="question">
+        <i>I have no idea how to start solving this mission.</i>
+    </div>
+    <div class="answer">
+        <p>💡 Your goal is to convert number <b class="code">value</b> into a sting, and then find the length of that string.</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Which instruments am I looking for?</i>
+    </div>
+    <div class="answer">
+        <p>
+            You need <a target="_blank" href="https://www.w3schools.com/JSREF/jsref_string.asp">String()</a> method to convert a number to a string and <a target="_blank" href="https://www.w3schools.com/jsref/jsref_length_string.asp">string.length</a> property.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Ok. How can I use them then?</i>
+    </div>
+    <div class="answer">
+        <p>
+            Let's convert given number <b class="code">value</b> into the string first. 
+        </p>
+        <pre class="brush: javascript">
+const text = String(value);
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>
+            How to use the second instrument?
+        </i>
+    </div>
+    <div class="answer">
+        <p>
+            Now find the length of the <b class="code">text</b>.
+        </p>
+        <pre class="brush: javascript">
+const text = String(value);
+const len = text.length;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>So, how my final solution will look like?</i>
+    </div>
+    <div class="answer">
+        <p>
+            You just need to wrap the code into function expression and return the <b class="code">len</b>.
+        </p>
+        <p>Here is the whole solution:</p>
+        <pre class="brush: javascript">
+import assert from "assert";
+
+
+function numberLength(value: number): number {
+    
+    const text = String(value);
+    const len = text.length;
+    
+    return len;
+}
+        </pre>
+        <p>Or you can do it in one line:</p>
+        <pre class="brush: javascript">
+import assert from "assert";
+
+
+function numberLength(value: number): number {
+    
+    return String(value).length
+}
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Show me more solutions!<br />
+        'Cause I wanna be a real 🥇 Javascript Hero!</i>
+    </div>
+    <div class="answer">
+        <p>Sure, grab it!</p>
+        <p>
+            Recursively make integer division and count each level of recursion until <b class="code">value</b> become 0.
+        </p>
+        <pre class="brush: javascript">
+import assert from "assert";
+
+
+function numberLength(value: number): number {
+
+    return value/10 >= 1 ? numberLength(value/10)+1 : 1;
+}
+        </pre>
+        <p>
+            Do the same as in previous solution, but clearer. Until the reminder of division <b class="code">value</b> by powered <b class="code">10</b> not equal <b class="code">value</b>, add 1 to <b class="code">digits</b>. Why <b class="code">digits</b> has initial value <b class="code">1</b>? To get non-zero reminder, you have to divide at least by 10. When the reminder becomes equal, it means you count all digits in <b class="code">value</b>.
+        </p>
+        <pre class="brush: javascript">
+import assert from "assert";
+
+
+function numberLength(value: number): number {
+    
+    var digits = 1;
+    while ( (value % (10**digits)) !== value )
+        digits++;
+
+    return digits;
+}
+        </pre>
+        <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Thanks! I know and understand more now! Everything works fine!</i>
+    </div>
+    <div class="answer">
+        👍 Glad to hear it!
+    </div>
+</div>
+</body>
