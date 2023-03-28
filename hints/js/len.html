@@ -55,10 +55,8 @@ const len = text.length;
             You just need to wrap the code into function expression and return the <b class="code">len</b>.
         </p>
         <p>Here is the whole solution:</p>
+        <div class="spoiler">
         <pre class="brush: javascript">
-import assert from "assert";
-
-
 function numberLength(value: number): number {
     
     const text = String(value);
@@ -67,16 +65,16 @@ function numberLength(value: number): number {
     return len;
 }
         </pre>
+        </div>
         <p>Or you can do it in one line:</p>
+        <div class="spoiler">
         <pre class="brush: javascript">
-import assert from "assert";
-
-
 function numberLength(value: number): number {
     
     return String(value).length
 }
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -89,22 +87,19 @@ function numberLength(value: number): number {
         <p>
             Recursively make integer division and count each level of recursion until <b class="code">value</b> become 0.
         </p>
+        <div class="spoiler">
         <pre class="brush: javascript">
-import assert from "assert";
-
-
 function numberLength(value: number): number {
 
     return value/10 >= 1 ? numberLength(value/10)+1 : 1;
 }
         </pre>
+        </div>
         <p>
             Do the same as in previous solution, but clearer. Until the reminder of division <b class="code">value</b> by powered <b class="code">10</b> not equal <b class="code">value</b>, add 1 to <b class="code">digits</b>. Why <b class="code">digits</b> has initial value <b class="code">1</b>? To get non-zero reminder, you have to divide at least by 10. When the reminder becomes equal, it means you count all digits in <b class="code">value</b>.
         </p>
+        <div class="spoiler">
         <pre class="brush: javascript">
-import assert from "assert";
-
-
 function numberLength(value: number): number {
     
     var digits = 1;
@@ -114,6 +109,7 @@ function numberLength(value: number): number {
     return digits;
 }
         </pre>
+        </div>
         <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
     </div>
 </div>
