@@ -67,6 +67,7 @@ length = len(text)
             Тобі лише потрібно обгорнути код у вираз функції і повернути <b class="code">length</b>.
         </p>
         <p>Ось повне рішення:</p>
+        <div class="spoiler">
         <pre class="brush: python">
 def number_length(value: int) -> int:
 
@@ -75,12 +76,15 @@ def number_length(value: int) -> int:
 
     return length
         </pre>
+        </div>
         <p>Або це можна записати в один рядок:</p>
+        <div class="spoiler">
         <pre class="brush: python">
 def number_length(value: int) -> int:
 
     return len(str(value))
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -93,14 +97,17 @@ def number_length(value: int) -> int:
         <p>
             Рекурсивно здійснюй цілочисельне ділення і рахуй рівень рекурсії поки <b class="code">value</b> не стане 0.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def number_length(value: int) -> int:
 
     return 1 + ((value := value // 10) and number_length(value))
         </pre>
+        </div>
         <p>
             Роби те ж, що і в попередньому розв'язку, але більш зрозуміло. Поки <b class="code">value</b> має більше 1 цифри (<b class="code">> 9</b>) додавай 1 до <b class="code">digits</b> і роби цілочисельне ділення. Чому <b class="code">digits</b> має початкове значення <b class="code">1</b>? Тому що невід'ємні числа менше 10 (навіть 0) мають довжину в 1 цифру.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def number_length(value: int) -> int:
 
@@ -111,6 +118,7 @@ def number_length(value: int) -> int:
         
     return digits
         </pre>
+        </div>
         <p><b>Тисни "Best solutions" в меню місії і побачиш багато інших цікавих розв'язків!</b></p>
     </div>
 </div>
