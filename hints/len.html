@@ -63,6 +63,7 @@ length = len(text)
             You just need to wrap the code into function expression and return the <b class="code">length</b>.
         </p>
         <p>Here is the whole solution:</p>
+        <div class="spoiler">
         <pre class="brush: python">
 def number_length(value: int) -> int:
 
@@ -71,12 +72,15 @@ def number_length(value: int) -> int:
 
     return length
         </pre>
+        </div>
         <p>Or you can do it in one line:</p>
+        <div class="spoiler">
         <pre class="brush: python">
 def number_length(value: int) -> int:
 
     return len(str(value))
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -89,14 +93,17 @@ def number_length(value: int) -> int:
         <p>
             Recursively make integer division and count each level of recursion until <b class="code">value</b> become 0.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def number_length(value: int) -> int:
 
     return 1 + ((value := value // 10) and number_length(value))
         </pre>
+        </div>
         <p>
             Do the same as in previous solution, but clearer. Until the <b class="code">value</b> has more then 1 digit (<b class="code">> 9</b>) add 1 to <b class="code">digits</b> and make integer division. Why <b class="code">digits</b> has initial value <b class="code">1</b>? Because non-negative numbers less then 10 (even 0) have 1 digit length.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def number_length(value: int) -> int:
 
@@ -107,6 +114,7 @@ def number_length(value: int) -> int:
         
     return digits
         </pre>
+        </div>
         <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
     </div>
 </div>
