@@ -1,0 +1,129 @@
+<body data-author="oduvan">
+<div class="question-answer">
+    <div class="question">
+        <p>Je n'ai aucune idée de comment commencer à résoudre cette mission.</p>
+    </div>
+    <div class="answer">
+        <p>💡 En Python, une chaîne est une liste de caractères ou de symboles. Ainsi la chaîne <b class="code">"Hi"</b> est une liste de deux éléments <b class="code">"H"</b> et <b class="code">"i"</b>. Ainsi, presque toutes les fonctions de liste fonctionnent correctement avec les chaînes de caractères.</p>
+
+        <p>Votre objectif est de convertir une <b class="code">valeur</b> entière en une chaîne, puis de trouver la longueur de cette chaîne (ou de trouver la longueur d'une liste de caractères).</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Quelle fonction dois-je rechercher ?</p>
+    </div>
+    <div class="answer">
+        <p>Voici une liste de <a target="_blank" href="https://docs.python.org/3/library/functions.html">toutes les fonctions intégrées</a> dans Python. Essayez de vérifier la liste.</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Pouvez-vous m'indiquer une fonction ?</p>
+    </div>
+    <div class="answer">
+        <p><a target="_blank" href="https://docs.python.org/3/library/functions.html#len">len()</a> est la fonction pour trouver la longueur, et <a target="_blank" href="https://docs.python.org/3/library/functions.html#str">str()</a> - pour convertir un objet en chaîne de caractères.</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Comment puis-je les utiliser ?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Commençons par convertir un entier en chaîne de caractères. 
+        </p>
+        <pre class="brush: python">
+texte = str(valeur)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Comment utiliser la deuxième fonction ?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Trouvez maintenant la longueur du <b class="code">texte</b>.
+        </p>
+        <pre class="brush: python">
+texte = str(valeur)       
+longueur = len(texte)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Alors, à quoi ressemblera ma solution finale ?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Il vous suffit d'intégrer le code dans une expression de fonction et de renvoyer la <b class="code">longueur</b>.
+        </p>
+        <p>Voici la solution complète :</p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def number_length(value : int) -&gt; int :
+
+    text = str(value)
+    length = len(texte)
+
+    return length
+        </pre>
+        </div>
+        <p>Vous pouvez également le faire en une seule ligne :</p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def number_length(value : int) -&gt; int :
+
+    return len(str(valeur))
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Montrez-moi d'autres solutions !<br />
+        parce que je veux être une vraie 🥇 Python Ninnjaa !</p>
+    </div>
+    <div class="answer">
+        <p>Bien sûr, prenez-le !</p>
+        <p>
+            Recursivement faire la division entière et compter chaque niveau de récursion jusqu'à ce que la <b class="code">valeur</b> devient 0.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def number_length(value : int) -&gt; int :
+
+    return 1 + ((valeur := valeur // 10) and number_length(valeur))
+        </pre>
+        </div>
+        <p>
+            Faites la même chose que dans la solution précédente, mais en plus clair. Jusqu'à ce que la <b class="code">valeur</b> ait plus d'un chiffre<b class="code">(&gt; 9</b>), ajoutez 1 aux <b class="code">chiffres</b> et effectuez une division entière. Pourquoi les <b class="code">chiffres</b> ont-ils une valeur initiale de <b class="code">1</b>? Parce que les nombres non négatifs inférieurs à 10 (même 0) ont une longueur de 1 chiffre.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def number_length(value : int) -&gt; int :
+
+    digits = 1
+    while valeur &gt; 9 :
+        chiffres += 1
+        valeur //= 10
+        
+    retour chiffres
+        </pre>
+        </div>
+        <p><b>Cliquez sur "Meilleures solutions" dans le menu mission et voyez beaucoup d'autres solutions intéressantes !</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Merci beaucoup ! Je comprends mieux maintenant ! Tout fonctionne bien !</p>
+    </div>
+    <div class="answer">
+        👍 Heureux de l'apprendre !
+    </div>
+</div>
+</body>
