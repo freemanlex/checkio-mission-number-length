@@ -9,7 +9,7 @@
 </div>
 <div class="question-answer">
     <div class="question">
-        <p>Quels sont les instruments que je recherche ?</p>
+        <p>Quels sont les instruments que je recherche?</p>
     </div>
     <div class="answer">
         <p>
@@ -19,21 +19,21 @@
 </div>
 <div class="question-answer">
     <div class="question">
-        <p>Comment puis-je les utiliser ?</p>
+        <p>Comment puis-je les utiliser?</p>
     </div>
     <div class="answer">
         <p>
             Commençons par convertir un nombre donné en <b class="code">une</b> chaîne de caractères. 
         </p>
         <pre class="brush: javascript">
-const text = String(value) ;
+const text = String(value);
         </pre>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
         <p>
-            Comment utiliser le deuxième instrument ?
+            Comment utiliser le deuxième instrument?
         </p>
     </div>
     <div class="answer">
@@ -41,35 +41,35 @@ const text = String(value) ;
             Trouvez maintenant la longueur du <b class="code">texte</b>.
         </p>
         <pre class="brush: javascript">
-const text = String(value) ;
-const len = text.length ;
+const text = String(value);
+const len = text.length;
         </pre>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        <p>Alors, à quoi ressemblera ma solution finale ?</p>
+        <p>Alors, à quoi ressemblera ma solution finale?</p>
     </div>
     <div class="answer">
         <p>
             Il vous suffit d'envelopper le code dans une expression de fonction et de renvoyer la <b class="code">longueur</b>.
         </p>
-        <p>Voici la solution complète :</p>
+        <p>Voici la solution complète:</p>
         <div class="spoiler">
         <pre class="brush: javascript">
-function numberLength(value : number) : number {
+function numberLength(value: number): number {
     
-    const text = String(valeur) ;
-    const len = text.length ;
+    const text = String(valeur);
+    const len = text.length;
     
-    return len ;
+    return len;
 }
         </pre>
         </div>
-        <p>Vous pouvez également le faire en une seule ligne :</p>
+        <p>Vous pouvez également le faire en une seule ligne:</p>
         <div class="spoiler">
         <pre class="brush: javascript">
-function numberLength(value : number) : number {
+function numberLength(value: number): number {
     
     return String(value).length
 }
@@ -79,19 +79,19 @@ function numberLength(value : number) : number {
 </div>
 <div class="question-answer">
     <div class="question">
-        <p>Montrez-moi d'autres solutions !<br />
-        parce que je veux être un vrai 🥇 Javascript Hero !</p>
+        <p>Montrez-moi d'autres solutions!<br />
+        parce que je veux être un vrai 🥇 Javascript Hero!</p>
     </div>
     <div class="answer">
-        <p>Bien sûr, prenez-le !</p>
+        <p>Bien sûr, prenez-le!</p>
         <p>
             Effectuer récursivement une division entière et compter chaque niveau de récursivité jusqu'à ce que la <b class="code">valeur</b> devienne 0.
         </p>
         <div class="spoiler">
         <pre class="brush: javascript">
-function numberLength(value : number) : number {
+function numberLength(value: number): number {
 
-    return valeur/10 &gt;= 1 ? numberLength(valeur/10)+1 : 1 ;
+    return valeur/10 &gt;= 1 ? numberLength(valeur/10)+1 : 1;
 }
         </pre>
         </div>
@@ -100,25 +100,25 @@ function numberLength(value : number) : number {
         </p>
         <div class="spoiler">
         <pre class="brush: javascript">
-function numberLength(value : number) : number {
+function numberLength(value: number): number {
     
-    var digits = 1 ;
-    while ( (valeur % (10**chiffres)) !== valeur )
-        chiffres++ ;
+    var digits = 1;
+    while ((valeur % (10**chiffres)) !== valeur)
+        chiffres++;
 
-    return digits ;
+    return digits;
 }
         </pre>
         </div>
-        <p><b>Cliquez sur "Meilleures solutions" dans le menu de la mission et voyez beaucoup d'autres solutions intéressantes !</b></p>
+        <p><b>Cliquez sur "Meilleures solutions" dans le menu de la mission et voyez beaucoup d'autres solutions intéressantes!</b></p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        <p>Merci beaucoup ! J'en sais et j'en comprends plus maintenant ! Tout fonctionne bien !</p>
+        <p>Merci beaucoup! J'en sais et j'en comprends plus maintenant! Tout fonctionne bien!</p>
     </div>
     <div class="answer">
-        👍 Heureux de l'apprendre !
+        👍 Heureux de l'apprendre!
     </div>
 </div>
 </body>
