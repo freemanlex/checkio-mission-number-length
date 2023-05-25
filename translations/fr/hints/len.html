@@ -11,7 +11,7 @@
 </div>
 <div class="question-answer">
     <div class="question">
-        <p>Quelle fonction dois-je rechercher ?</p>
+        <p>Quelle fonction dois-je rechercher?</p>
     </div>
     <div class="answer">
         <p>Voici une liste de <a target="_blank" href="https://docs.python.org/3/library/functions.html">toutes les fonctions intégrées</a> dans Python. Essayez de vérifier la liste.</p>
@@ -19,7 +19,7 @@
 </div>
 <div class="question-answer">
     <div class="question">
-        <p>Pouvez-vous m'indiquer une fonction ?</p>
+        <p>Pouvez-vous m'indiquer une fonction?</p>
     </div>
     <div class="answer">
         <p><a target="_blank" href="https://docs.python.org/3/library/functions.html#len">len()</a> est la fonction pour trouver la longueur, et <a target="_blank" href="https://docs.python.org/3/library/functions.html#str">str()</a> - pour convertir un objet en chaîne de caractères.</p>
@@ -27,7 +27,7 @@
 </div>
 <div class="question-answer">
     <div class="question">
-        <p>Comment puis-je les utiliser ?</p>
+        <p>Comment puis-je les utiliser?</p>
     </div>
     <div class="answer">
         <p>
@@ -41,7 +41,7 @@ texte = str(valeur)
 <div class="question-answer">
     <div class="question">
         <p>
-            Comment utiliser la deuxième fonction ?
+            Comment utiliser la deuxième fonction?
         </p>
     </div>
     <div class="answer">
@@ -56,16 +56,16 @@ longueur = len(texte)
 </div>
 <div class="question-answer">
     <div class="question">
-        <p>Alors, à quoi ressemblera ma solution finale ?</p>
+        <p>Alors, à quoi ressemblera ma solution finale?</p>
     </div>
     <div class="answer">
         <p>
             Il vous suffit d'intégrer le code dans une expression de fonction et de renvoyer la <b class="code">longueur</b>.
         </p>
-        <p>Voici la solution complète :</p>
+        <p>Voici la solution complète:</p>
         <div class="spoiler">
         <pre class="brush: python">
-def number_length(value : int) -&gt; int :
+def number_length(value: int) -&gt; int:
 
     text = str(value)
     length = len(texte)
@@ -73,10 +73,10 @@ def number_length(value : int) -&gt; int :
     return length
         </pre>
         </div>
-        <p>Vous pouvez également le faire en une seule ligne :</p>
+        <p>Vous pouvez également le faire en une seule ligne:</p>
         <div class="spoiler">
         <pre class="brush: python">
-def number_length(value : int) -&gt; int :
+def number_length(value: int) -&gt; int:
 
     return len(str(valeur))
         </pre>
@@ -85,17 +85,17 @@ def number_length(value : int) -&gt; int :
 </div>
 <div class="question-answer">
     <div class="question">
-        <p>Montrez-moi d'autres solutions !<br />
-        parce que je veux être une vraie 🥇 Python Ninnjaa !</p>
+        <p>Montrez-moi d'autres solutions!<br />
+        parce que je veux être une vraie 🥇 Python Ninnjaa!</p>
     </div>
     <div class="answer">
-        <p>Bien sûr, prenez-le !</p>
+        <p>Bien sûr, prenez-le!</p>
         <p>
             Effectuer récursivement une division entière et compter chaque niveau de récursivité jusqu'à ce que la <b class="code">valeur</b> devienne 0.
         </p>
         <div class="spoiler">
         <pre class="brush: python">
-def number_length(value : int) -&gt; int :
+def number_length(value: int) -&gt; int:
 
     return 1 + ((valeur := valeur // 10) and number_length(valeur))
         </pre>
@@ -105,25 +105,25 @@ def number_length(value : int) -&gt; int :
         </p>
         <div class="spoiler">
         <pre class="brush: python">
-def number_length(value : int) -&gt; int :
+def number_length(value: int) -&gt; int:
 
     digits = 1
-    while valeur &gt; 9 :
+    while valeur &gt; 9:
         chiffres += 1
         valeur //= 10
         
     retour chiffres
         </pre>
         </div>
-        <p><b>Cliquez sur "Meilleures solutions" dans le menu mission et voyez beaucoup d'autres solutions intéressantes !</b></p>
+        <p><b>Cliquez sur "Meilleures solutions" dans le menu mission et voyez beaucoup d'autres solutions intéressantes!</b></p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        <p>Merci beaucoup ! Je comprends mieux maintenant ! Tout fonctionne bien !</p>
+        <p>Merci beaucoup! Je comprends mieux maintenant! Tout fonctionne bien!</p>
     </div>
     <div class="answer">
-        👍 Heureux de l'apprendre !
+        👍 Heureux de l'apprendre!
     </div>
 </div>
 </body>
