@@ -52,7 +52,7 @@ const len = text.length;
     </div>
     <div class="answer">
         <p>
-            Il vous suffit d'envelopper le code dans une expression de fonction et de renvoyer la <b class="code">longueur</b>.
+            Il vous suffit d'envelopper le code dans une expression de fonction et de renvoyer la <b class="code">length</b>.
         </p>
         <p>Voici la solution complète:</p>
         <div class="spoiler">
@@ -85,32 +85,32 @@ function numberLength(value: number): number {
     <div class="answer">
         <p>Bien sûr, prenez-le!</p>
         <p>
-            Effectuer récursivement une division entière et compter chaque niveau de récursivité jusqu'à ce que la <b class="code">valeur</b> devienne 0.
+            Effectuer récursivement une division entière et compter chaque niveau de récursivité jusqu'à ce que la <b class="code">value</b> devienne 0.
         </p>
         <div class="spoiler">
         <pre class="brush: javascript">
 function numberLength(value: number): number {
 
-    return valeur/10 &gt;= 1 ? numberLength(valeur/10)+1 : 1;
+    return value/10 &gt;= 1 ? numberLength(value/10)+1 : 1;
 }
         </pre>
         </div>
         <p>
-            Faites la même chose que dans la solution précédente, mais en plus clair. Tant que le rappel de la division de la <b class="code">valeur</b> par la puissance <b class="code">10</b> n'est pas égal à la <b class="code">valeur</b>, ajoutez 1 aux <b class="code">chiffres</b>. Pourquoi les <b class="code">chiffres</b> ont-ils une valeur initiale de <b class="code">1</b>? Pour obtenir un rappel non nul, vous devez diviser au moins par 10. Lorsque le rappel devient égal, cela signifie que vous comptez tous les chiffres dans la <b class="code">valeur</b>.
+            Faites la même chose que dans la solution précédente, mais en plus clair. Tant que le rappel de la division de la <b class="code">value</b> par la puissance <b class="code">10</b> n'est pas égal à la <b class="code">value</b>, ajoutez 1 aux <b class="code">digits</b>. Pourquoi les <b class="code">chiffres</b> ont-ils une valeur initiale de <b class="code">1</b>? Pour obtenir un rappel non nul, vous devez diviser au moins par 10. Lorsque le rappel devient égal, cela signifie que vous comptez tous les chiffres dans la <b class="code">valeur</b>.
         </p>
         <div class="spoiler">
         <pre class="brush: javascript">
 function numberLength(value: number): number {
     
     var digits = 1;
-    while ((valeur % (10**chiffres)) !== valeur)
+    while ((value % (10**digits)) !== value)
         chiffres++;
 
     return digits;
 }
         </pre>
         </div>
-        <p><b>Cliquez sur "Meilleures solutions" dans le menu de la mission et voyez beaucoup d'autres solutions intéressantes!</b></p>
+        <p><b>Cliquez sur "Best solutions" dans le menu de la mission et voyez beaucoup d'autres solutions intéressantes!</b></p>
     </div>
 </div>
 <div class="question-answer">
