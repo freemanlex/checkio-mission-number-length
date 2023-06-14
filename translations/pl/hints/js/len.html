@@ -1,0 +1,124 @@
+<body data-author="oduvan">
+<div class="question-answer">
+    <div class="question">
+        <p>Nie mam pojęcia, jak zacząć rozwiązywać tę misję.</p>
+    </div>
+    <div class="answer">
+        <p>pana celem jest przekształcenie liczby <b class="code">value</b> w żądło, a następnie znalezienie długości tej struny.</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Jakich instrumentów szukam?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Potrzebuje Pan metody <a target="_blank" href="https://www.w3schools.com/JSREF/jsref_string.asp">String()</a> do konwersji liczby na ciąg i właściwości <a target="_blank" href="https://www.w3schools.com/jsref/jsref_length_string.asp">string.length</a>.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Jak mogę ich użyć?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Najpierw przekonwertujmy podaną liczbę <b class="code">value</b> na ciąg znaków. 
+        </p>
+        <pre class="brush: javascript">
+const text = String(value);
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Jak użyć drugiego instrumentu?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę teraz znaleźć długość <b class="code">text</b>.
+        </p>
+        <pre class="brush: javascript">
+const text = String(value);
+const len = text.length;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Jak będzie wyglądało moje ostateczne rozwiązanie?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Musi Pan tylko zawinąć kod w wyrażenie funkcji i zwrócić <b class="code">len</b>.
+        </p>
+        <p>Oto całe rozwiązanie:</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function numberLength(value: number): number {
+    
+    const text = String(value);
+    const len = text.length;
+    
+    return len;
+}
+        </pre>
+        </div>
+        <p>Można to też zrobić w jednej linii:</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function numberLength(value: number): number {
+    
+    return String(value).length
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Proszę pokazać mi więcej rozwiązań!<br />
+        bo chcę być prawdziwym 🥇 bohaterem Javascript!</p>
+    </div>
+    <div class="answer">
+        <p>Jasne, proszę łapać!</p>
+        <p>
+            Proszę rekurencyjnie wykonać dzielenie liczb całkowitych i policzyć każdy poziom rekurencji, aż <b class="code">value</b> stanie się 0.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function numberLength(value: number): number {
+
+    return value/10>= 1? numberLength(value/10)+1: 1;
+}
+        </pre>
+        </div>
+        <p>
+            Proszę zrobić to samo, co w poprzednim rozwiązaniu, ale jaśniej. Dopóki przypomnienie o dzieleniu <b class="code">value</b> przez zasilane <b class="code">10</b> nie będzie równe <b class="code">value</b>, proszę dodać 1 do <b class="code">digits</b>. Dlaczego <b class="code">digits</b> ma wartość początkową <b class="code">1</b>? Aby uzyskać niezerowe przypomnienie, należy podzielić co najmniej przez 10. Gdy przypomnienie stanie się równe, oznacza to, że policzył Pan wszystkie cyfry w <b class="code">value</b>.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function numberLength(value: number): number {
+    
+    var digits = 1;
+    while ( (value % (10**digits))!== value )
+        digits++;
+
+    return digits;
+}
+        </pre>
+        </div>
+        <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Dzięki! Teraz wiem i rozumiem więcej! Wszystko działa dobrze!</p>
+    </div>
+    <div class="answer">
+        miło mi to słyszeć!
+    </div>
+</div>
+</body>
