@@ -1,0 +1,129 @@
+<body data-author="oduvan">
+<div class="question-answer">
+    <div class="question">
+        <p>我不知道如何开始解决这个任务。</p>
+    </div>
+    <div class="answer">
+        <p>💡 Python中的字符串是一个字符或符号的列表。所以字符串<b class="code">"Hi"</b> 是一个由两个元素组成的列表<b class="code">"H"</b> 和<b class="code">"i"</b> 。所以几乎所有的列表函数都能正确地处理字符串。</p>
+
+        <p>你的目标是将整数<b class="code">value</b> 转换为一个字符串，然后找出这个字符串的长度 (或者找出字符列表的长度)。</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>我要找的是哪个函数？</p>
+    </div>
+    <div class="answer">
+        <p>这里有一个Python中的<a target="_blank" href="https://docs.python.org/3/library/functions.html">all built-in functions</a> 列表。试着检查一下这个列表。</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>你能给我指出来吗？</p>
+    </div>
+    <div class="answer">
+        <p><a target="_blank" href="https://docs.python.org/3/library/functions.html#len">len()</a> 是查找长度的函数，而 - 将对象转换为字符串。<a target="_blank" href="https://docs.python.org/3/library/functions.html#str">str()</a> </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>好的，那我如何使用它们呢？</p>
+    </div>
+    <div class="answer">
+        <p>
+            让我们先把给定的整数转换为字符串。 
+        </p>
+        <pre class="brush: python">
+text = str(value)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            如何使用第二个函数？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            现在找出<b class="code">text</b> 的长度。
+        </p>
+        <pre class="brush: python">
+text = str(value)       
+length = len(text)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>那么，我的最终解决方案会是怎样的呢？</p>
+    </div>
+    <div class="answer">
+        <p>
+            你只需要将代码包装成函数表达式并返回<b class="code">length</b> 。
+        </p>
+        <p>下面是整个解决方案：</p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def number_length(value: int) -> int:
+
+    text = str(value)
+    length = len(text)
+
+    return length
+        </pre>
+        </div>
+        <p>或者你可以在一行中完成：</p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def number_length(value: int) -> int:
+
+    return len(str(value))
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>告诉我更多的解决方案!<br />
+        因为我想成为一个真正的🥇 Python Ninnjaa!</p>
+    </div>
+    <div class="answer">
+        <p>当然，抓住它!</p>
+        <p>
+            递归地进行整数除法，并计算每一级递归，直到<b class="code">value</b> 成为0。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def number_length(value: int) -> int:
+
+    return 1 + ((value:= value // 10) and number_length(value))
+        </pre>
+        </div>
+        <p>
+            做法与前面的解决方案相同，但更清晰。直到<b class="code">value</b> 有超过1个数字(<b class="code">> 9</b>)时，将1加到<b class="code">digits</b> 并进行整数除法。为什么<b class="code">digits</b> 的初始值是<b class="code">1</b> ？因为小于10的非负数（甚至是0）有1位数的长度。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def number_length(value: int) -> int:
+
+    digits = 1
+    while value> 9:
+        digits += 1
+        value //= 10
+        
+    return digits
+        </pre>
+        </div>
+        <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>谢谢!我现在知道并理解了更多!一切工作都很顺利!</p>
+    </div>
+    <div class="answer">
+        👍很高兴听到这个消息!
+    </div>
+</div>
+</body>
