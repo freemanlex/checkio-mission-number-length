@@ -1,0 +1,124 @@
+<body data-author="oduvan">
+<div class="question-answer">
+    <div class="question">
+        <p>我不知道如何开始解决这个任务。</p>
+    </div>
+    <div class="answer">
+        <p>💡你的目标是将数字<b class="code">value</b> ，然后找到该弦的长度。</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>我要找的是哪种乐器？</p>
+    </div>
+    <div class="answer">
+        <p>
+            你需要<a target="_blank" href="https://www.w3schools.com/JSREF/jsref_string.asp">String()</a> 方法将数字转换为字符串，以及<a target="_blank" href="https://www.w3schools.com/jsref/jsref_length_string.asp">string.length</a> 属性。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>好的，那我如何使用它们呢？</p>
+    </div>
+    <div class="answer">
+        <p>
+            让我们先把给定的数字<b class="code">value</b> 转换为字符串。 
+        </p>
+        <pre class="brush: javascript">
+const text = String(value);
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            如何使用第二个工具？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            现在找出<b class="code">text</b> 的长度。
+        </p>
+        <pre class="brush: javascript">
+const text = String(value);
+const len = text.length;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>那么，我的最终解决方案会是什么样子呢？</p>
+    </div>
+    <div class="answer">
+        <p>
+            你只需要把代码包装成函数表达式并返回<b class="code">len</b> 。
+        </p>
+        <p>下面是整个解决方案：</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function numberLength(value: number): number {
+    
+    const text = String(value);
+    const len = text.length;
+    
+    return len;
+}
+        </pre>
+        </div>
+        <p>或者你可以在一行中完成：</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function numberLength(value: number): number {
+    
+    return String(value).length
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>告诉我更多的解决方案!<br />
+        因为我想成为一个真正的🥇 Javascript英雄!</p>
+    </div>
+    <div class="answer">
+        <p>当然，抓住它!</p>
+        <p>
+            递归地进行整数除法，并计算每一级递归，直到<b class="code">value</b> 成为0。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function numberLength(value: number): number {
+
+    return value/10>= 1? numberLength(value/10)+1: 1;
+}
+        </pre>
+        </div>
+        <p>
+            做法与前面的解决方案相同，但更清晰。<b class="code">10</b> 直到除数<b class="code">value</b> 的提示值不等于<b class="code">value</b> ，在<b class="code">digits</b> 上加 1。为什么<b class="code">digits</b> 的初始值是<b class="code">1</b> ？为了得到非零的提醒，你必须至少除以10。当提醒变得相等时，这意味着你计算了<b class="code">value</b> 中的所有数字。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function numberLength(value: number): number {
+    
+    var digits = 1;
+    while ( (value % (10**digits))!== value )
+        digits++;
+
+    return digits;
+}
+        </pre>
+        </div>
+        <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>谢谢!我现在知道并理解了更多!一切工作都很顺利!</p>
+    </div>
+    <div class="answer">
+        👍很高兴听到这个消息!
+    </div>
+</div>
+</body>
