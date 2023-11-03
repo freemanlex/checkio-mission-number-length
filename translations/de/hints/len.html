@@ -1,0 +1,129 @@
+<body data-author="oduvan">
+<div class="question-answer">
+    <div class="question">
+        <p>Ich habe keine Ahnung, wie ich mit dem Lösen dieser Aufgabe beginnen soll.</p>
+    </div>
+    <div class="answer">
+        <p>💡 String in Python ist eine Liste von Zeichen oder Symbolen. Die Zeichenkette <b class="code">"Hi"</b> ist also eine Liste mit zwei Elementen <b class="code">"H"</b> und <b class="code">"i"</b>. Daher funktionieren fast alle Listenfunktionen korrekt mit String.</p>
+
+        <p>Ihr Ziel ist es, die Ganzzahl <b class="code">value</b> in eine Zeichenkette umzuwandeln und dann die Länge dieser Zeichenkette zu ermitteln (oder die Länge einer Liste von Zeichen zu bestimmen).</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Nach welcher Funktion suche ich?</p>
+    </div>
+    <div class="answer">
+        <p>Hier ist eine Liste von <a target="_blank" href="https://docs.python.org/3/library/functions.html">all built-in functions</a> in Python. Versuchen Sie, die Liste zu überprüfen.</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Können Sie mich bitte darauf hinweisen?</p>
+    </div>
+    <div class="answer">
+        <p><a target="_blank" href="https://docs.python.org/3/library/functions.html#len">len()</a> ist die Funktion, um die Länge zu ermitteln, und <a target="_blank" href="https://docs.python.org/3/library/functions.html#str">str()</a> - um ein Objekt in einen String zu konvertieren.</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok. Wie kann ich sie dann verwenden?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Konvertieren wir zuerst die gegebene Ganzzahl in einen String. 
+        </p>
+        <pre class="brush: python">
+text = str(value)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Wie kann ich die zweite Funktion verwenden?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Finden Sie nun die Länge von <b class="code">text</b>.
+        </p>
+        <pre class="brush: python">
+text = str(value)       
+length = len(text)
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Wie sieht nun meine endgültige Lösung aus?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Sie müssen nur den Code in einen Funktionsausdruck einpacken und die <b class="code">length</b> zurückgeben.
+        </p>
+        <p>Hier ist die gesamte Lösung:</p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def number_length(value: int) -> int:
+
+    text = str(value)
+    length = len(text)
+
+    return length
+        </pre>
+        </div>
+        <p>Oder Sie können es in einer Zeile machen:</p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def number_length(value: int) -> int:
+
+    return len(str(value))
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Zeigen Sie mir mehr Lösungen!<br />
+        denn ich will ein echter 🥇 Python Ninnjaa sein!</p>
+    </div>
+    <div class="answer">
+        <p>Klar, schnapp sie dir!</p>
+        <p>
+            Führen Sie rekursiv eine ganzzahlige Division durch und zählen Sie jede Ebene der Rekursion, bis <b class="code">value</b> zu 0 wird.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def number_length(value: int) -> int:
+
+    return 1 + ((value:= value // 10) and number_length(value))
+        </pre>
+        </div>
+        <p>
+            Gehen Sie genauso vor wie bei der vorherigen Lösung, aber deutlicher. Bis <b class="code">value</b> mehr als 1 Ziffer hat (<b class="code">> 9</b>), addieren Sie 1 zu <b class="code">digits</b> und führen Sie eine ganzzahlige Division durch. Warum hat <b class="code">digits</b> den Anfangswert <b class="code">1</b>? Weil nicht-negative Zahlen kleiner als 10 (sogar 0) 1 Stelle lang sind.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def number_length(value: int) -> int:
+
+    digits = 1
+    while value> 9:
+        digits += 1
+        value //= 10
+        
+    return digits
+        </pre>
+        </div>
+        <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Vielen Dank! Ich weiß und verstehe jetzt mehr! Alles funktioniert einwandfrei!</p>
+    </div>
+    <div class="answer">
+        👍 Freut mich zu hören!
+    </div>
+</div>
+</body>
