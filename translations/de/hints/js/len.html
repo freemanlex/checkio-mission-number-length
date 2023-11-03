@@ -1,0 +1,124 @@
+<body data-author="oduvan">
+<div class="question-answer">
+    <div class="question">
+        <p>Ich habe keine Ahnung, wie ich mit dem Lösen dieser Aufgabe beginnen soll.</p>
+    </div>
+    <div class="answer">
+        <p>💡 Ihr Ziel ist es, die Zahl <b class="code">value</b> in eine Zeichenkette umzuwandeln und dann die Länge dieser Zeichenkette zu ermitteln.</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Nach welchen Instrumenten suche ich?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Sie benötigen die Methode <a target="_blank" href="https://www.w3schools.com/JSREF/jsref_string.asp">String()</a>, um eine Zahl in eine Zeichenkette umzuwandeln, und die Eigenschaft <a target="_blank" href="https://www.w3schools.com/jsref/jsref_length_string.asp">string.length</a>.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok. Wie kann ich sie dann verwenden?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Konvertieren wir zunächst die Zahl <b class="code">value</b> in einen String. 
+        </p>
+        <pre class="brush: javascript">
+const text = String(value);
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Wie kann ich das zweite Instrument verwenden?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Finden Sie nun die Länge der <b class="code">text</b>.
+        </p>
+        <pre class="brush: javascript">
+const text = String(value);
+const len = text.length;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Wie sieht nun meine endgültige Lösung aus?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Sie müssen nur den Code in einen Funktionsausdruck einpacken und die <b class="code">len</b> zurückgeben.
+        </p>
+        <p>Hier ist die gesamte Lösung:</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function numberLength(value: number): number {
+    
+    const text = String(value);
+    const len = text.length;
+    
+    return len;
+}
+        </pre>
+        </div>
+        <p>Oder Sie können es in einer Zeile machen:</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function numberLength(value: number): number {
+    
+    return String(value).length
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Zeigen Sie mir mehr Lösungen!<br />
+        denn ich will ein echter 🥇 Javascript-Held sein!</p>
+    </div>
+    <div class="answer">
+        <p>Klar, schnappen Sie es sich!</p>
+        <p>
+            Führen Sie rekursiv eine ganzzahlige Division durch und zählen Sie jede Ebene der Rekursion, bis <b class="code">value</b> zu 0 wird.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function numberLength(value: number): number {
+
+    return value/10>= 1? numberLength(value/10)+1: 1;
+}
+        </pre>
+        </div>
+        <p>
+            Machen Sie dasselbe wie in der vorherigen Lösung, aber deutlicher. Bis die Erinnerung der Division <b class="code">value</b> durch <b class="code">10</b> nicht gleich <b class="code">value</b> ist, addieren Sie 1 zu <b class="code">digits</b>. Warum hat <b class="code">digits</b> den Anfangswert <b class="code">1</b>? Um eine Erinnerung zu erhalten, die nicht Null ist, müssen Sie mindestens durch 10 dividieren. Wenn die Erinnerung gleich wird, bedeutet das, dass Sie alle Ziffern in <b class="code">value</b> zählen.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function numberLength(value: number): number {
+    
+    var digits = 1;
+    while ( (value % (10**digits))!== value )
+        digits++;
+
+    return digits;
+}
+        </pre>
+        </div>
+        <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Vielen Dank! Ich weiß und verstehe jetzt mehr! Alles funktioniert einwandfrei!</p>
+    </div>
+    <div class="answer">
+        👍 Freut mich zu hören!
+    </div>
+</div>
+</body>
